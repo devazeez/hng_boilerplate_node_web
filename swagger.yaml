@@ -765,13 +765,19 @@ components:
       type: object
       properties:
         id:
-          type: integer
+          type: string
           format: int64
-        name:
+        full_name:
+          type: string
+        bussiness_name:
+          type: string
+        description:
           type: string
         email:
           type: string
           format: email
+        password:
+          type: string
         role:
           type: string
           enum:
@@ -785,9 +791,10 @@ components:
           type: string
           format: date-time
       required:
-        - name
+        - full_name
         - email
         - role
+        - password
     Token:
       type: object
       properties:
@@ -818,7 +825,7 @@ components:
       type: object
       properties:
         id:
-          type: integer
+          type: string
           format: int64
         name:
           type: string
@@ -828,7 +835,7 @@ components:
           type: number
           format: float
         vendor_id:
-          type: integer
+          type: string
           format: int64
         created_at:
           type: string
@@ -845,10 +852,10 @@ components:
       type: object
       properties:
         id:
-          type: integer
+          type: string
           format: int64
         user_id:
-          type: integer
+          type: string
           format: int64
         items:
           type: array
@@ -866,10 +873,10 @@ components:
       type: object
       properties:
         id:
-          type: integer
+          type: string
           format: int64
         meal_id:
-          type: integer
+          type: string
           format: int64
         quantity:
           type: integer
@@ -886,10 +893,10 @@ components:
       type: object
       properties:
         id:
-          type: integer
+          type: string
           format: int64
         user_id:
-          type: integer
+          type: string
           format: int64
         items:
           type: array
@@ -916,7 +923,7 @@ components:
       type: object
       properties:
         order_id:
-          type: integer
+          type: string
           format: int64
         amount:
           type: number
@@ -940,7 +947,7 @@ components:
       type: object
       properties:
         order_id:
-          type: integer
+          type: string
           format: int64
         amount:
           type: number
@@ -963,5 +970,30 @@ components:
       properties:
         status:
           type: boolean
+          enum:
+            - false
         message:
           type: string
+          enum:
+            - Invalid request body
+            - User already exists
+            - User not found
+            - Item not found in cart
+            - Meal not found
+            - Order not found
+            - Vendor already exists
+            - Vendor not found
+            - Customer already exists
+            - Customer not found
+            - Unauthorized
+            - Invalid credentials
+            - Invalid payment details
+            - Invalid card number
+            - Invalid expiry date
+            - Invalid CVV
+            - Invalid email address
+            - Invalid phone number
+            - Invalid address
+            - Invalid name
+            - Invalid price
+
