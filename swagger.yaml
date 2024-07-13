@@ -31,7 +31,7 @@ tags:
   - name: Admin
     description: Endpoints for managing admin accounts
 paths:
-  /auth/sign-up:
+  /auth/signup:
     post:
       tags:
         - Onboarding
@@ -58,7 +58,7 @@ paths:
                 $ref: "#/components/schemas/InvalidRequest"
         "409":
           description: User already exists
-  /auth/sign-in:
+  /auth/login:
     post:
       tags:
         - Onboarding
