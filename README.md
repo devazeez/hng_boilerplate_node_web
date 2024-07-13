@@ -1,4 +1,4 @@
-# [App Name] Integration Documentation
+# Bellefull Integration Documentation
 
 ## Overview
 
@@ -253,4 +253,4 @@ All API endpoints can be referenced in the [API Reference](API_REFERENCE.md) doc
 
 ## Versioning
 
-This project is versioned to ensure backward compatibility and easy maintenance. The current version is [version].
+This project is versioned to ensure backward compatibility and easy maintenance. The current version is v1.
