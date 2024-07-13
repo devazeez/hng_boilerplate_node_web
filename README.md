@@ -2,11 +2,13 @@
 
 ## Overview
 
-[Description!]
+The Belleful Food Ordering App API provides a seamless experience for customers to order their favorite meals. This API offers endpoints for managing user accounts, browsing available meals, placing orders, and tracking delivery status.
 
 ## Folder Structure
 
 ```
+|--- dist
+|    |--- index.html
 |--- src
 |    |--- controllers
 |    |--- database
@@ -20,6 +22,10 @@
 |--- app.ts
 |--- .gitignore
 |--- package.json
+|--- README.md
+|--- API_REFERENCE.md
+|--- CONTRIBUTORS_GUIDE.md
+|--- CODE_OF_CONDUCT.md
 |--- tsconfig.json
 ```
 

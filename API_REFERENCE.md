@@ -411,6 +411,15 @@ Update details of a specific vendor
 | ---- | ---------- | ----------- | -------- | ---- |
 | vendorId | path | ID of the vendor to update | Yes | integer |
 
+##### Request Body
+```json
+{
+  "full_name": "string",
+  "email": "string",
+  "bussiness_name": "string"
+}
+```
+
 ##### Responses
 
 | Code | Description |
@@ -418,6 +427,13 @@ Update details of a specific vendor
 | 200 | Vendor details updated successfully |
 | 400 | Invalid request body |
 | 404 | Vendor not found |
+
+```json
+{
+  "status": true,
+  "message": "Vendor details updated successfully"
+}
+```
 
 #### DELETE
 ##### Summary:
@@ -441,6 +457,13 @@ Delete a specific vendor account
 | 204 | Vendor deleted successfully |
 | 404 | Vendor not found |
 
+```json
+{
+  "status": true,
+  "message": "Vendor deleted successfully"
+}
+```
+
 ### /meals
 
 #### GET
@@ -457,6 +480,25 @@ Retrieve a list of all available meals from vendors
 | Code | Description |
 | ---- | ----------- |
 | 200 | List of meals retrieved successfully |
+
+```json
+{
+  "status": true,
+  "message": "List of meals retrieved successfully",
+  "data": [
+    {
+      "id": "string",
+      "name": "string",
+      "price": "number",
+      "vendor": {
+        "id": "string",
+        "full_name": "string",
+        "bussiness_name": "string"
+      }
+    }
+  ]
+}
+```
 
 #### POST
 ##### Summary:
