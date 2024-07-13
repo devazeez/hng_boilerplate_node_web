@@ -197,6 +197,18 @@ Register a new customer account with the Bellefull Food Ordering App. This endpo
 | 400 | Invalid request body |
 | 409 | Customer already exists |
 
+```json
+{
+  "status": true,
+  "message": "Customer registration successful",
+  "data": {
+    "id": "string",
+    "full_name": "string",
+    "email": "string"
+  }
+}
+```
+
 ### /customers/{customerId}
 
 #### GET
@@ -349,7 +361,13 @@ Create a new vendor
 
 ##### Description:
 
-Register a new vendor account with the Bellefull Food Ordering App
+Register a new vendor account with the Bellefull Food Ordering App. This endpoint is only accessible to admin users.
+
+##### Request Headers
+
+| Name | Description | Required |
+| ---- | ----------- | -------- |
+| Authorization | Bearer token | Yes |
 
 ##### Responses
 
@@ -540,6 +558,23 @@ Retrieve details of a specific meal
 | 200 | Meal details retrieved successfully |
 | 404 | Meal not found |
 
+```json
+{
+  "status": true,
+  "message": "Meal details retrieved successfully",
+  "data": {
+    "id": "string",
+    "name": "string",
+    "price": "number",
+    "vendor": {
+      "id": "string",
+      "full_name": "string",
+      "bussiness_name": "string"
+    }
+  }
+}
+```
+
 #### PUT
 ##### Summary:
 
@@ -554,6 +589,9 @@ Update details of a specific meal
 | Name | Located in | Description | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |
 | mealId | path | ID of the meal to update | Yes | integer |
+
+##### Request Headers
+
 
 ##### Responses
 

@@ -928,21 +928,15 @@ components:
         amount:
           type: number
           format: float
-        card_number:
+        payment_type:
           type: string
-          pattern: ^[0-9]{16}$
-        expiry_date:
-          type: string
-          pattern: ^(0[1-9]|1[0-2])\/[0-9]{2}$
-        cvv:
-          type: string
-          pattern: ^[0-9]{3}$
+          enum:
+            - card
+            - transfer
       required:
         - order_id
         - amount
-        - card_number
-        - expiry_date
-        - cvv
+        - payment_type
     Receipt:
       type: object
       properties:
