@@ -8,6 +8,10 @@ contact@bellefull.app
 
 **License:** [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.html)
 
+## Database Schema
+<!-- Image -->
+![Database Schema](./db-schema.png)
+
 ### /auth/signup
 
 #### POST

@@ -766,7 +766,6 @@ components:
       properties:
         id:
           type: string
-          format: int64
         full_name:
           type: string
         bussiness_name:
@@ -826,7 +825,6 @@ components:
       properties:
         id:
           type: string
-          format: int64
         name:
           type: string
         description:
@@ -836,7 +834,6 @@ components:
           format: float
         vendor_id:
           type: string
-          format: int64
         created_at:
           type: string
           format: date-time
@@ -853,10 +850,8 @@ components:
       properties:
         id:
           type: string
-          format: int64
         user_id:
           type: string
-          format: int64
         items:
           type: array
           items:
@@ -874,10 +869,8 @@ components:
       properties:
         id:
           type: string
-          format: int64
         meal_id:
           type: string
-          format: int64
         quantity:
           type: integer
         created_at:
@@ -894,10 +887,8 @@ components:
       properties:
         id:
           type: string
-          format: int64
         user_id:
           type: string
-          format: int64
         items:
           type: array
           items:
@@ -922,9 +913,10 @@ components:
     Payment:
       type: object
       properties:
+        id:
+          type: string
         order_id:
           type: string
-          format: int64
         amount:
           type: number
           format: float
@@ -940,9 +932,10 @@ components:
     Receipt:
       type: object
       properties:
+        id:
+          type: string
         order_id:
           type: string
-          format: int64
         amount:
           type: number
           format: float
